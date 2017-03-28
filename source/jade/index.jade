@@ -1,0 +1,289 @@
+doctype html
+html(lang="en")
+  head
+    title Form-Art associazione culturale
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Raleway:400,800')
+    link(rel="stylesheet" type="text/css" href="style.css")
+
+  body
+    
+    header
+      .l-header.header__nav-main
+        .header__left
+          .header__logo
+            h1 Form-Art
+            p.header__payoff associazione socioculturale
+        
+        .header__center
+          img(src="img/mini-library.png" alt="Libri")
+        
+        .header__right
+          button.arrow.arrow__up.arrow--disabled
+          button.arrow.arrow__down.arrow--disabled
+      
+      //.l-header.header__nav-bullet
+        span.header__bullet.b__1.nav--deactive.header__bullet--active
+        span.header__bullet.b__2.nav--deactive
+        span.header__bullet.b__3.nav--deactive
+        span.header__bullet.b__4.nav--deactive
+        span.header__bullet.b__5.nav--deactive
+        span.header__bullet.b__6.nav--deactive
+        span.header__bullet.b__7.nav--deactive
+
+      //.l-h
+        .header__logo
+          img(src="img/logo-formart.svg" alt="logo libri")
+
+      button.top.arrow.arrow__top.arrow--disabled
+
+    main.l-wrapper
+    
+      section.l-box
+        .one
+          .welcome-head
+            img(src="img/mini-library.png" alt="Libri")
+          .welcome Ciao<br> 
+            input(type="text" name="name_top" id="name_top" placeholder="Scrivi qui il tuo nome..") 
+            <br>Unisciti a noi!<br>Abbiamo una storia da raccontarti<br><b>E 3 REGALI DA FARTI!</b>
+          button.arrow.arrow__down.arrow--in-page.arrow--disabled
+
+      
+      section.l-box
+        .two
+          .hello Ciao <span class="name-placeholder">{user}</span>
+          
+          .books.flex.no-flex-mobile
+
+            .books__content In occasione della <b>CAMPAGNA DI TESSERAMENTO 2017 / 2018</b> ai <b>NUOVI SOCI</b> diamo la possibilit&agrave; di <b>SCEGLIERE 3 LIBRI</b> tra le migliaia che abbiamo recuperato.
+
+            .books__picture
+              .books__picture-container
+                b.etiOne Form-art<br>
+                b.etiTwo Tessera 2017/18
+
+      
+      section.l-box
+        .three
+          .hello <span class="name-placeholder">{user}</span>
+
+          .history
+            .history__incipit ECCO UNA NOSTRA BREVE PRESENTAZIONE
+
+            .no-flex-mobile
+              .history__card.history__card--hands Siamo un <b>GRUPPO</b> di persone <br>che fonda i propri rapporti sulla <br><b>FIDUCIA</b> e l'<b>ASCOLTO</b> reciproco <br>nel <b>RISPETTO DELLA IDENTIT&Agrave;</b> <br>del singolo.
+              
+              .history__card.history__card--people <b>OGNUNO DI NOI &Egrave; IMPORTANTE</b> <br>e pu&ograve; contare sia sul <br><b>CONTRIBUTO</b> quanto sulla <br><b>COLLABORAZIONE</b> degli altri.
+
+              .history__card.history__card--books La nostra idea comune &egrave; che <b>LA <br>CULTURA &Egrave; DI TUTTI</b> e ci <br>impegnamo a <b>METTERLA A <br>DISPOSIZIONE</b> delle persone.
+
+
+      section.l-box
+        .four
+          .box-red.box-red--one
+            .box-red__title LA NOSTRA STORIA
+            .box-red__tab.tab-ieri(onclick="special.changeTab('ieri')") IERI
+            .box-red__tab.tab-oggi.box-red__tab--active(onclick="special.changeTab('oggi')") OGGI
+            .box-red__tab.tab-domani.box-red__tab--active(onclick="special.changeTab('domani')") DOMANI
+            .box-red__content 
+              p.p-ieri <b>IERI</b> Form-art &egrave; nata con l'intento di diffondere la cultura attraverso attivit&agrave; legate al territorio e di creare un gruppo eterogeneo, per provenienza sociale en et&agrave;, legato dalla passione per le arti.
+              p.p-oggi.h-d-none <b>OGGI</b> Form-art &egrave; nata con l'intento di diffondere la cultura attraverso attivit&agrave; legate al territorio e di creare un.
+              p.p-domani.h-d-none <b>DOMANI</b> Form-art &egrave; nata con l'intento di diffondere la cultura attraverso attivit&agrave; legate al territorio e di creare un gruppo eterogeneo, per provenienza sociale en et&agrave;, legato dalla passione per le arti gruppo eterogeneo, per provenienza sociale en et&agrave;, legato dalla passione per le arti.
+            .box-red--deco-1
+            .box-red--deco-3
+
+          .box-red.box-red--two
+            .box-red--deco-2
+            .box-red__title QUELLO CHE FACCIAMO
+            .box-red__list
+              h2.h2 PROGETTO INTEGRATO<br>"MAI SOLI CON UN LIBRO"
+              ul
+                li(onclick="special.changeListTab(1)") IL LIBRO RITROVATO
+                li(onclick="special.changeListTab(2)") UN LIBRO AL SOLE
+                li(onclick="special.changeListTab(3)") DA TE
+                li(onclick="special.changeListTab(4)") BIBLI-HOSPITAL
+                li(onclick="special.changeListTab(5)") BIBLIO-INFORM@ART
+                li(onclick="special.changeListTab(6)") C.A.S.SCO
+                li(onclick="special.changeListTab(7)") V.I.S.
+            .box-red__bottom E CHE GI&Agrave; ABBIAMO FATTO 
+              a(href="#") <img src="img/icon-doc.png" /> Apri il PDF
+      
+
+      section.l-box
+        .five
+          .become
+            .become__title DIVENTA PARTE DELLA NOSTRA COMUNIT&Agrave;
+          
+            .become__content-container
+              .become__content--back
+              .become__content Stiamo cercando <b>persone propositive</b>, interessate a intraprendere un <b>percorso di creazione di valore nella societ&agrave;</b>. L'et&agrave; non &egrave; importante, <b>tutti possono contribuire</b>.
+              .become__content--bullet
+          
+            .become__footer PARTECIPA AL CAMBIAMENTO. DIVENTA PROTAGONISTA.
+
+
+      section.l-box
+        .six
+          .hello <span class="name-placeholder">{Name}</span>
+          .form__welcome Benvenuto/a nella pagina di <b>RICHIESTA DI TESSERAMENTO</b>
+          
+          .statute__container
+            img(src="img/logo_yellow.png")
+            br
+            button.form__btn-read(href="#" onclick="special.showTabStatuto()") LEGGI LO STATUTO
+            br
+            button.form__btn-down(href="#") Oppure scarica il PDF
+            span.bb.bbd1
+            span.bb.bbd2
+            span.bb.bbd3
+            span.bb.bbd4
+            
+
+      section.l-box
+        .seven
+          .hello <span class="name-placeholder">{Name}</span>
+          .form__welcome Benvenuto/a nella pagina di <b>RICHIESTA DI TESSERAMENTO</b>
+          
+          .form__big-container
+            h2.form__title MODULO DI ISCRIZIONE
+            
+            .form__form-container
+              form(id="richiesta" name="richiesta" type="post" action="mailer.php")
+                h3.form__title-fill COMPILA IL MODULO
+                button.form__btn-down(href="#") Oppure scarica il PDF
+                
+                .form__input-container
+                  p.m1
+                    label
+                    input.form__input(type="text" name="nome" minlength="3" placeholder="Nome" required)
+                  p.m2
+                    label
+                    input.form__input(type="email" name="email" placeholder="E-mail" required)
+                  p.m1
+                    label
+                    input.form__input(type="text" name="cognome" minlength="3" placeholder="Cognome" required)
+                  p.m2
+                    label
+                    input.form__input(type="text" name="tel" placeholder="Tel." required)
+                  p.m1
+                    label
+                    input.form__input(type="text" name="cod-fiscale" minlength="16" maxlength="16" placeholder="Codice fiscale" required)
+                  p.m2
+                    label
+                    select.form__input(name="genere-letterario" required)
+                      option(selected value="") Genere lettario preferito...
+                      option(value="altro") Altro...
+                  p.form__privacy
+                      input(id="privacy" type="checkbox" name="privacy" required)
+                      label(for="privacy") Privacy
+                  p
+                    button.form__btn-submit(type="submit") INVIA
+
+                div(id="form-messages")
+              
+              .form__bottom.b1 La tessera &egrave; gratuita<br>ed &egrave; valida dal ../../.. al ../../..
+              .form__bottom.b2
+                img.h-f-left(src="img/aics_logo_150.png" alt="AiCS")
+                .h-f-left Form-Art<br>Associazione culturale<br>affiliata A.I.C.S.
+              .h-clear
+            
+          .form__deco
+
+      
+      section.l-box
+        .eight
+          .hello <span class="name-placeholder">{Name}</span>
+          .contacts__deco
+            .contacts__title Non esitare a contattarci. <br><b>STIAMO ASPETTANDO TE.</b>
+            
+            h3.contacts__sub-title ENTRA A FAR PARTE DEL CAMBIAMENTO
+            
+            .contacts__social
+              ul
+                li
+                  a.contacts__social__btn.btn--mail(href="#")
+                li
+                  a.contacts__social__btn.btn--facebook(href="#")
+                li
+                  a.contacts__social__btn.btn--twitter(href="#")
+                li
+                  a.contacts__social__btn.btn--instagram(href="#")
+            
+            .contacts__list
+              dl
+                dt Sede legale
+                dd via Milano 10, 65122 Pescara
+                dt C.F.
+                dd 91055340680
+                dt Tel./Fax
+                dd 085.4223511
+                dt Cell.
+                dd 329.5632180 - 347.6838111
+                dt e-mail
+                dd ass.form-art@libero.it
+                dt Sito internet
+                dd www.formartpescara.it
+
+
+    .box-red__tab-mask.list-tab-1.h-op-zero.h-h-zero
+      .box-red__tab-mask__container
+        i.icon.box-red__tab-mask__icon-close(onclick="special.closeListTab()") &#10006;
+        h3 IL LIBRO RITROVATO
+        p Lorem Ipsum &egrave; un testo segnaposto utilizzato nel settore della tipografia e della stampa.
+
+    .box-red__tab-mask.list-tab-2.h-op-zero.h-h-zero
+      .box-red__tab-mask__container
+        i.icon.box-red__tab-mask__icon-close(onclick="special.closeListTab()") &#10006;
+        h3 UN LIBRO AL SOLE
+        p Lorem Ipsum &egrave; un testo segnaposto utilizzato nel settore della tipografia e della stampa.
+
+    .box-red__tab-mask.list-tab-3.h-op-zero.h-h-zero
+      .box-red__tab-mask__container
+        i.icon.box-red__tab-mask__icon-close(onclick="special.closeListTab()") &#10006;
+        h3 DA TE
+        p Lorem Ipsum &egrave; un testo segnaposto utilizzato nel settore della tipografia e della stampa.
+
+    .box-red__tab-mask.list-tab-4.h-op-zero.h-h-zero
+      .box-red__tab-mask__container
+        i.icon.box-red__tab-mask__icon-close(onclick="special.closeListTab()") &#10006;
+        h3 BIBLI-HOSPITAL
+        p Lorem Ipsum &egrave; un testo segnaposto utilizzato nel settore della tipografia e della stampa.
+
+    .box-red__tab-mask.list-tab-5.h-op-zero.h-h-zero
+      .box-red__tab-mask__container
+        i.icon.box-red__tab-mask__icon-close(onclick="special.closeListTab()") &#10006;
+        h3 BIBLIO-INFORM@ART
+        p Lorem Ipsum &egrave; un testo segnaposto utilizzato nel settore della tipografia e della stampa.
+
+    .box-red__tab-mask.list-tab-6.h-op-zero.h-h-zero
+      .box-red__tab-mask__container
+        i.icon.box-red__tab-mask__icon-close(onclick="special.closeListTab()") &#10006;
+        h3 C.A.S.SCO
+        p Lorem Ipsum &egrave; un testo segnaposto utilizzato nel settore della tipografia e della stampa.
+
+    .box-red__tab-mask.list-tab-7.h-op-zero.h-h-zero
+      .box-red__tab-mask__container
+        i.icon.box-red__tab-mask__icon-close(onclick="special.closeListTab()") &#10006;
+        h3 V.I.S.
+        p Lorem Ipsum &egrave; un testo segnaposto utilizzato nel settore della tipografia e della stampa.
+
+    .box-red__tab-mask.tab-statuto.h-op-zero.h-h-zero
+      .box-red__tab-mask__container
+        i.icon.box-red__tab-mask__icon-close(onclick="special.closeListTab()") &#10006;
+        h3 STATUTO
+        p Lorem Ipsum &egrave; un testo segnaposto utilizzato nel settore della tipografia e della stampa.
+
+    .controller
+      .a
+      .b 
+      .c
+      .d
+      .e
+      .f
+      .g
+
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    script(src="output.min.js")
+    script(src="main.js")

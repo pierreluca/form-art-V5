@@ -1,0 +1,93 @@
+
+$font:'Raleway', sans-serif;
+
+$blue-main:#3072af;
+$blue-light:#3ca9f7;
+$green:#3cb647;
+$yellow:#fbc621;
+$red:#e05326;
+
+$bg-color:#e2e9ec;
+$bg-image:"img/bg-body.png";
+
+$shadow-basic:1px 0px 8px rgba(0, 0, 0, 0.55);
+$shadow-dark:1px 3px 8px rgba(0, 0, 0, 0.75);
+
+
+$smartphone-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 960px;
+
+@mixin smartphone {
+  @media (min-width: #{$smartphone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+/*
+Helpers
+*/
+
+.flex{
+	display: flex;
+}
+
+.no-flex-mobile {
+	display: block;
+	@include desktop {
+		display: flex;
+	}
+}
+
+.h-d-none{ display: none; }
+.h-d-block{ display: block; }
+
+.h-op-zero{ opacity: 0; }
+.h-op-one{ opacity: 1; }
+
+.h-h-zero{ height: 0 !important; }
+
+.h-tr-scale{ transform: scale(1.1); }
+
+.h-f-right{	float: right; }
+.h-f-left{	float: left; }
+
+.h-clear{ clear: both; height: 0; }
+
+.h-min-height-auto{ min-height: auto !important; }
+
+.icon{ font-style: normal; }
+
+
+
+.controller{
+	//display: none;
+	position: fixed;
+	top:0 ; left: 0;
+	width: 100%;
+	margin: 120px auto 0;
+	padding-left: 30px;
+	font-size: 25px;
+	font-weight: bold;
+	color: #000;
+	text-align: left;
+	opacity: 0.7;
+	@include desktop{
+		margin-top: 180px;
+	}
+	&>div{
+		width: 100%;
+	}
+}

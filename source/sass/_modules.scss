@@ -1,0 +1,1278 @@
+/* 
+Header 
+*/
+
+$height-nav:124px;
+//$height-nav:500px;
+
+.header {
+	&__nav-bullet {
+		z-index: 0;
+		//height: $height-nav;
+		height: 40px;
+		box-shadow: 1px 0px 30px rgba(0, 0, 0, 0.2);
+		//padding-top: 75px;
+		padding-right: 3%;
+		padding-left: 3%;
+		transition: all 0.5s linear;
+		@include smartphone{
+			padding-right: 10%;
+			padding-left: 10%;
+		}
+		@include tablet{
+			padding-right: 20%;
+			padding-left: 20%;
+		}
+		@include desktop {
+			//display: none;
+		}
+	}
+	&__bullet {
+		border: 2px solid $blue-main;
+		width:19px;
+		height:19px;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: all 0.1s ease;
+		&--active{
+			background-color: $blue-main;
+			cursor: default;
+			&:hover{
+				transform: scale(0.95,0.95) !important;
+			}
+		}
+		&:hover{
+			background-color: $blue-main;
+			transform: scale(1.5,1.5);
+
+		}
+	}
+	&__nav-main{
+		z-index: 1;
+		//margin-top: -($height-nav);
+		position: relative;
+		transition: all 0.5s linear;
+		/*@include desktop {
+			margin-top: 0;
+		}*/
+	}
+	&__left {
+
+	}
+	&__logo {
+		float: left;
+		width: 170px;
+		height: 55px;
+		background: url('img/bg-logo.png') no-repeat;
+		background-size: 100%;
+		color: #fff;
+		/*@include desktop {
+			width: 308px;
+			height: 97px;
+		}*/
+		h1 {
+			margin: 0 0 12px;
+			text-indent: 20px;
+			letter-spacing: 2px;
+			font-weight: bold;
+			font-size: 23px;
+			padding: 5px 0 0;
+			/*@include desktop {
+				text-indent: 38px;
+				padding: 8px 0 0;
+				font-size: 40px;
+			}*/
+		}
+	}
+	&__payoff {
+		width: 114px;
+		margin: -10px 0px 0px 21px;
+		padding-top: 2px;
+		border-top: 1px solid #fff;
+		letter-spacing: 0;
+		font-size: 9px;
+		white-space: nowrap;
+		/*@include desktop {
+			width: 192px;
+			margin: -10px 0px 0px 39px;
+			border-top: 2px solid #fff;
+			letter-spacing: 0.5px;
+			font-size: 14px;
+		}*/
+	}
+	&__center {
+		display: none;
+		padding-top: 10px;
+		text-align: center;
+		@include tablet {
+			display: block;
+			transform: scale(0.5);
+		}
+		/*@include desktop {
+			display: block;
+			transform: scale(1);
+		}*/
+	}
+	&__right {
+		text-align: right;
+		padding-right: 15px;
+		margin-left: -15px;
+	}
+}
+
+.arrow {
+	width: 30px;
+	height: 30px;
+	margin: 6px 6px 6px 0;
+	background-color: $blue-main;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.55);
+	cursor: pointer;
+	transition:  transform 200ms ease;
+	@include tablet {
+		width: 40px;
+		height: 40px;
+	}
+	/*@include desktop {
+	 	width: 60px;
+	 	height: 60px;
+	 	border: 3px solid #fff;
+	}*/
+	&__up{
+	    background: $blue-main url(img/arrow-up.png) no-repeat center center;
+	    background-size: 18px auto;
+	    @include tablet {
+	    	background-size: 23px auto;
+	    }
+	    /*@include desktop {
+	    	background-size: auto;
+	    }*/
+	}
+	&__down{
+	    background: $blue-main url(img/arrow-down.png) no-repeat center center;
+	    background-size: 18px auto;
+	    @include tablet {
+	    	background-size: 23px auto;
+	    }
+	    /*@include desktop {
+	    	background-size: auto;
+	    }*/
+	}
+	&__top{
+	    background: $blue-main url(img/arrow-up.png) no-repeat center center;
+	    background-size: 18px auto;
+	    @include tablet {
+	    	background-size: 23px auto;
+	    }
+	    /*@include desktop {
+	    	background-size: auto;
+	    }*/
+	}
+	&:hover:enabled{
+		transform: scale(1.09);
+	}
+	&:active:enabled{
+		background-color: #21598d;
+		transform: scale(1.2);
+	}
+	&--disabled {
+		background-color: #b4b4b4;
+		opacity: 0.7;
+		cursor: default;
+		&:hover{
+			transform: scale(1) !important;
+		}
+	}
+	&--in-page {
+		margin: 0px auto;
+		border: 2px solid #fff;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.55);
+		background-size: 61%;
+		transition: all 0.5s linear;
+	}
+}
+
+button.top{
+	position: fixed;
+	bottom: 10px;
+	right: 3%;
+}
+
+.box{
+	min-height: 100vh;
+	width: 100%;
+	background: $bg-color;
+}
+
+
+/*
+Section one
+*/
+
+.one{
+	@extend .box;
+	margin-top: 75px;
+	//margin-bottom: 20px;
+	//////min-height: 415px;
+	//height: 70vh;
+	background: $bg-color url("img/libreria-formart.svg") left top;
+	display: flex;
+	flex-flow: column;
+	//////border-bottom: 140px solid #fff;
+	//////padding-bottom: 40px;
+	@include tablet {
+		////margin-top: 75px;
+	}
+	/*@include desktop {
+		margin-top: 170px;
+		border-bottom: none;
+		padding-bottom: 0;
+	}*/
+}
+
+.welcome-head {
+	margin-top: 50px;
+	@include tablet {
+		display: none;
+	}
+}
+
+.welcome {
+	width: 220px;
+	height: 195px;
+	margin: 5px auto 15px;
+	padding-top: 11px;
+	background: transparent url("img/box-welcome.svg") left top no-repeat;
+	background-size: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	line-height: 1.15;
+	transition: all 0.4s ease-in-out;
+	@include tablet {
+		width: 333px;
+		height: 295px;
+		margin-top: 44px;
+		padding-top: 25px;
+		font-size: 25px;
+	}
+	#name_top {
+		width: 88%;
+		margin: 9px 0px 15px;
+		padding: 3px 5px;
+		background-color: rgb(255, 255, 255);
+		border: 0px none;
+		border-radius: 5px;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.55);
+		color: $blue-main;
+		text-align: center;
+		font-size: 17px;
+		transition: all 0.3s ease;
+		@include tablet {
+			margin: 23px 0px 25px;
+			font-size: 26px;
+		}
+		&:hover,&:focus{
+			transform:(scale(1.4));
+		}
+	}
+}
+
+
+
+
+/*
+Section two
+*/
+
+.books{
+	background: linear-gradient(to bottom, #a0b1c1 0%,#a0b1c1 72%,$bg-color 72%,$bg-color 100%);
+	background-color: $bg-color;
+	padding-top: 20px;
+	overflow: hidden;
+	@include desktop{
+		padding-top: 0;
+	}
+	&__content {
+		width: auto;
+		margin: 15px;
+		padding: 27px 28px;
+		background-color: #fff;
+		border-radius: 5px;
+		color: #50586b;
+		font-size: 18px;
+		line-height: 1.6;
+		position: relative;
+		left: 0;
+		transition: all 0.6s linear;
+		@include smartphone{
+			width: 400px;
+			margin: 25px auto 25px;
+			font-size: 20px;
+			line-height: 2;
+		}
+		@include desktop{
+			width: 426px;
+			margin: 60px 20px 155px 30px;
+			font-size: 22px;
+		}
+	}
+	&__picture {
+		width: 285px;
+		margin: 0 auto;
+		height: 316px;
+		background: url('img/books.png') center top / 90% no-repeat;
+		position: relative;
+		right: 0;
+		transition: all 1s linear;
+		@include desktop{
+			width: 500px;
+			height: 450px;
+			background: url('img/books.png') 30px 100% no-repeat;
+		}
+		&-container {
+			width: 124px;
+			padding: 203px 0 0 0;
+			float: left;
+			line-height: 1.4;
+			text-align: center;
+			color: #fff;
+			@include desktop{
+				width: 155px;
+				padding: 385px 0 0 46px;
+			}
+			.etiOne {
+				font-size: 17px;
+				@include desktop{
+					font-size: 20px;
+				}
+			}
+			.etiTwo {
+				font-size: 9px;
+				@include desktop{
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+Section three
+*/
+
+.three{
+	@extend .box;
+	text-align: center;
+	color: #fff;
+	//margin-top: 20px;
+}
+
+.hello {
+	position: relative;
+	padding: 15px;
+	margin: -25px 0 0;
+	background: $blue-main;
+	box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.23);
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	transition: all 0.6s linear;
+	@include tablet {
+		font-size: 34px;
+	}
+	@include desktop {
+		margin: -25px -20px 0;
+	}
+}
+.history{
+	background: $bg-color url('img/dec-cards.png') no-repeat 0px -50px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	transition: all 0.6s linear;
+}
+.history__incipit{
+	width: 75%;
+	margin: 45px auto;
+	padding: 8px;
+	background: $blue-main;
+	border-radius: 7px;
+	font-size: 13px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	@include tablet {
+		font-size: 27px;
+	}
+}
+.history__card{
+	width: 90%;
+	height: auto;
+	margin-bottom: 50px;
+	padding: 200px 16px 30px;
+	background: $blue-light;
+	border: 3px solid #fff;
+	border-radius: 17px;
+	box-shadow: 8px 5px 0 RGBA(0, 0, 0, 0.14);
+	font-size: 16px;
+	transition: all 0.6s ease-in;
+	&--hands{
+		background: $blue-light url('img/big-icon-hands.png') no-repeat center 35px;
+	}
+	&--people{
+		background: $blue-light url('img/big-icon-people.png') no-repeat center 35px;
+	}
+	&--books{
+		background: $blue-light url('img/big-icon-books.png') no-repeat center 35px;
+	}
+	@include tablet {
+		width: 75%;
+	}
+	@include desktop {
+		min-width: 270px;
+		width: 29%;
+		height: 350px;
+		br{ 
+			display: block;
+		}
+	}
+	br{ 
+		display: none;
+	}
+}
+
+
+
+
+
+
+/*
+Section four
+*/
+
+.four{
+	@extend .box;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box-red {
+	width: 90%;
+	background: #ee5a60;
+	border-radius: 12px;
+	box-shadow: 8px 4px 0 RGBA(0, 0, 0, 0.14);
+	padding: 28px 21px 21px 21px;
+	margin: 65px auto;
+	text-align: center;
+	transition: all 0.5s ease;
+	@include tablet{
+		width: 75%;
+	}
+	@include desktop{
+		width: 45%;
+	}
+	&--one{
+		@include desktop{height: 505px;  /* auto 411px;*/}
+	}
+	&--two{
+		@include desktop{height: 505px;}
+	}
+	&__title{
+		color: #fff;
+		font-weight: bold;
+		font-size: 110%;
+		margin-bottom: 15px;
+		@include tablet{
+			font-size: 28px;
+		}
+	}
+	&__tab{
+		border: 2px solid #ee5a60;
+		background: #fff;
+		box-shadow: 2px 2px 8px 0px RGBA(47, 47, 47, 0.32);
+		border-radius: 10px 10px 0px 0px;
+		border-bottom: none;
+		padding: 15px 5%;
+		width: 33.3%;
+		float: left;
+		color: #b64547;
+		font-weight: bold;
+		font-size: 60%;
+		@include tablet{
+			font-size: 19px;
+		}
+		&--active{
+			border-bottom: 4px solid rgb(238, 90, 96);
+			padding-bottom: 11px;
+			cursor: pointer;
+			transition: all 0.2s linear;
+			&:hover{
+				border-bottom: 4px solid rgb(238, 90, 96);
+				padding-bottom: 16px;
+				padding-top: 17px;
+				margin-top: -7px;
+			}
+		}	
+	}
+	&__content{
+		float: left;
+		width: 99.9%;
+		padding: 28px;
+		background: #fff;
+		box-shadow: 2px 6px 8px -3px RGBA(47, 47, 47, 0.32);
+		border: 2px solid #ee5a60;
+		border-radius: 0px 0px 5px 5px;
+		border-top: none;
+		text-align: justify;
+		line-height: 1.5;
+		font-size: 16px;
+		@include desktop{
+			line-height: 1.8;
+			font-size: 18px;
+		}
+	}
+	&__list{
+		border: 1px solid #ee5a60;
+		background: #fff;
+		box-shadow: 2px 2px 8px 0px RGBA(47, 47, 47, 0.32);
+		border-radius: 5px;
+		padding: 15px;
+		.h2 {
+			font-size: 100%;
+			font-weight: bold;
+			color: $red;
+			margin: 15px auto 20px;
+			@include tablet{
+				font-size: 21px;
+			}
+			>br{
+				display: none;
+				@include desktop{
+					display: block;
+				}
+			}
+		}
+		li {
+			text-align: left;
+			margin-bottom: 8px;
+			padding: 4px 4px 4px 8%;
+			font-weight: bold;
+			list-style: outside none none;
+			color: rgb(103, 103, 103);
+			background: transparent url("img/arr-black.png") no-repeat scroll 90% center;
+			font-size: 13px;
+			transition: all 0.2s linear;
+			@include smartphone{
+				font-size: 16px;
+			}
+			@include tablet{
+				font-size: 18px;
+			}
+			&:hover{
+				color: #fff;
+				background-color: $blue-main;
+				cursor: pointer;
+				border-radius: 4px;
+				background-image: url("img/arr-white.png");
+				box-shadow: $shadow-dark;
+			}
+		}
+	}
+	&__bottom{
+		color: rgb(255, 255, 255);
+		font-weight: bold;
+		margin-top: 4px;
+		font-size: 9px;
+		a{
+			text-decoration: none;
+			color: #fff;
+			&:hover {
+				
+			}
+		}
+		img{
+			margin: 6px 2px -7px 10px;
+		}
+		@include smartphone{
+			font-size: 16px;
+		}
+	}
+	&__tab-mask{
+		////position: absolute;
+		z-index: 1000;
+
+		position: fixed;
+		background: #f2f2f2;
+		//padding: 30px 40px;
+		////width: 90%;
+		width: 100%;
+		////height: 398px;
+		height: 100%;
+		////left: 5%;
+		left: 0;
+		top: 0;
+		////margin-top: 125px;
+		margin-top: 0;
+		transition: all .3s ease .15s;
+		overflow: hidden;
+		/*@include tablet{
+			left: 12.5%;
+			width: 75%;
+			height: 441px;
+			margin-top: 139px;
+		}
+		@include desktop{
+			left: auto;
+			margin-left: -437px;
+			width: 414px;
+			height: 435px;
+		}*/
+		&__container{
+			border: 2px solid #df5227;
+			margin: 20px;
+			border-radius: 8px;
+			padding: 70px 15px 15px;
+			background: #fff;
+			color: #666;
+			height: 90%;
+			overflow-y: hidden;
+			h3{
+				margin-bottom: 15px;
+			}
+			p {
+				padding-right: 38px;
+				overflow-y: scroll;
+				height: 267px;
+			}
+		}
+		&__icon-close{
+			float: right;
+			margin-top: -70px;
+			margin-right: -3px;
+			font-size: 30px;
+			color: #df5227;
+			cursor: pointer;
+			transition: all 0.3s linear;
+			&:hover{
+				transform: scale(1.2,1.2);
+			}
+		}
+	}
+}
+
+.box-red--deco-1 {
+	background: url('img/graffa-in.png') no-repeat;
+	width: 100px;
+	height: 60px;
+	position: relative;
+	top: -82px;
+	left: -33%;
+	@include tablet{
+		top: -94px;
+		left: -37%;
+	}
+}
+
+.box-red--deco-2 {
+	background: url('img/table-top.png') no-repeat;
+	width: 179px;
+	height: 40px;
+	position: relative;
+	margin-top: -54px;
+	margin-bottom: 10px;
+}
+
+.box-red--deco-3 {
+	background: url('img/graffe.png') no-repeat right;
+	width: 100%;
+	height: 54px;
+	position: relative;
+	float: left;
+	margin-top: -54px;
+	top: 87px;
+}
+
+
+
+
+
+/*
+Section five
+*/
+
+
+.five{
+	@extend .box;
+}
+
+.become{
+	padding-top: 5px;
+	padding-bottom: 20px;
+	background: url('img/people-large.png') center 455px no-repeat;
+	transition: all 0.8s linear;
+	@include smartphone{
+		background: url('img/people-large.png') center 380px no-repeat;
+	}
+	@include tablet{
+		background: url('img/people-large.png') center 315px no-repeat;
+	}
+	@include desktop{
+		//padding-top: 35px;
+		background: url('img/scissors.png') -8% 70px no-repeat, url('img/people-large.png') center 325px no-repeat;
+	}
+	&__title{
+		width: 90%;
+		margin: 35px auto;
+		padding: 7px;
+		background: #fff;
+		border-radius: 5px;
+		color: $green;
+		font-size: 20px;
+		text-align: center;
+		font-weight: bold;
+		letter-spacing: 1px;
+		transition: all 0.6s ease;
+		@include tablet {
+			width: 550px;
+			padding: 15px;
+			font-size: 23px;
+		}
+	}
+	&__content-container{
+		margin: 0 auto 500px;
+		transition: all 0.6s ease;
+		@include tablet{
+			width: 550px;
+			height: 182px;
+			margin-bottom: 170px;
+		}
+	}
+	&__content{
+		position: absolute;
+		margin: 0 5%;
+		padding: 25px 35px 20px;
+		color: #fff;
+		font-size: 16px;
+		text-align: center;
+		line-height: 1.5;
+		letter-spacing: 1px;
+		border: 3px solid #fff;
+		border-radius: 6px;
+		background-color: $green;
+		box-shadow: 10px 8px 0px rgba(0,0,0,0.2);
+		@include smartphone{
+			font-size: 20px;
+			padding: 25px 45px 20px;
+		}
+		@include tablet{
+			margin: 0 10% 0 -5%;
+			font-size: 22px;
+		}
+		@include desktop{
+			width: 650px;
+			margin: 0 -5%;
+		}
+		&--back{
+			@extend .become__content;
+			transform: rotate(-2.5deg);
+			width: 90.3%;
+			margin-top: -4px;
+			@include tablet{
+				transform: rotate(-1.5deg);
+				width: 77%;
+			}
+			@include desktop{
+				width: 650px;
+			}
+		}
+		&--bullet{
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			margin: 12px 28px;
+			border-radius: 50%;
+			border: 4px solid #fff;
+			background-color: #b5babd;
+			@include smartphone{
+				margin: 15px 8%;
+			}
+			@include tablet{
+				margin: 15px -3%;
+			}
+			@include desktop{
+				margin: 10px 0 0 -4%;
+			}
+		}
+	}
+	&__footer{
+		width: auto;
+		margin: 0 5% 25px;
+		text-align: center;
+		background: $green;
+		border-radius: 5px;
+		font-weight: bold;
+		color: #fff;
+		text-decoration: none;
+		font-size: 15px;
+		padding: 5px 15px;
+		transition: all 0.6s ease;
+		@include smartphone{
+			font-size: 24px;
+			padding: 15px 25px;
+		}
+	}
+}
+
+
+/*
+Section six
+*/
+
+.six{
+	position: relative;
+	background-color: rgb(160, 177, 193);
+	padding-bottom: 5px;
+}
+.statute__container{
+	position: relative;
+	width: auto;
+	margin-bottom: 30px;
+	padding: 40px 25px 25px 25px;
+	background: #f2f2f2;
+	box-shadow: 13px 7px 0 0 RGBA(0, 0, 0, 0.19);
+	text-align: center;
+	transition: all 0.7s linear;
+	@include tablet {
+		width: 637px;
+		margin: 0 auto 45px;
+	}
+}
+.bb{
+	background: #ed9043;
+	width: 12px;
+	height: 12px;
+	display: block;
+	border-radius: 50%;
+	box-shadow: 2px 2px 0px 0px #CECECE;
+	&d1{ position: absolute; top: 20px; left: 20px; }
+	&d2{ position: absolute; top: 20px; right: 20px; }
+	&d3{ position: absolute; bottom: 20px; left: 20px; }
+	&d4{ position: absolute; bottom: 20px; right: 20px; }
+}
+
+
+
+/*
+Section seven
+*/
+
+.seven{
+	position: relative;
+	background-color: rgb(160, 177, 193);
+	padding-bottom: 5px;
+}
+
+.form{
+	&__welcome {
+		width: auto;
+		margin: 0 3% 65px;
+		padding: 16px;
+		font-size: 14px;
+		line-height: 1.6;
+		background-color: rgb(255, 255, 255);
+		border-radius: 0 0 5px 5px;
+		box-shadow: 0 2px 7px -2px RGBA(0, 0, 0, 0.64);
+		color: #2e71af;
+		text-align: center;
+		transition: all 0.7s ease-in;
+		/*@include smartphone{
+			font-size: 16px;
+		}*/
+		@include tablet {
+			width: 637px;
+			margin: 0 auto 45px;
+			padding: 25px;
+			font-size: 20px;
+		}
+	}
+	&__big-container{
+		position: relative;
+		width: 93%;
+		margin-bottom: 30px;
+		padding: 25px;
+		background: #fff;
+		box-shadow: 13px 7px 0 0 RGBA(0, 0, 0, 0.19);
+		text-align: center;
+		transition: all 0.7s linear;
+	}
+	&__btn-read{
+		margin: 25px auto 10px;
+		padding: 7px 23px;
+		border: 3px solid rgb(255, 255, 255);
+		border-radius: 7px;
+		box-shadow: 0px 1px 6px 1px rgb(225, 225, 225);
+		background-color: $yellow;
+		font-weight: bold;
+		color: #676767;
+		cursor: pointer;
+		font-size: 16px;
+		transition: all 0.2s linear;
+		@include smartphone{
+			font-size: 25px;
+		}
+		&:hover{
+			box-shadow: 0 1px 6px 1px #838383;
+		}
+	}
+	&__btn-down{
+		border: 3px solid $yellow;
+		background-color: rgb(255, 255, 255);
+		padding: 7px 25px;
+		border-radius: 6px;
+		font-weight: bold;
+		box-shadow: 0px 3px 6px 1px rgb(210, 210, 210);
+		margin: 10px auto 30px;
+		color: #676767;
+		cursor: pointer;
+		font-size: 13px;
+		transition: all 0.2s linear;
+		@include smartphone{
+			font-size: 19px;
+		}
+		&:hover{
+			box-shadow: 0 3px 6px 1px #808080;
+		}
+	}
+	&__title{
+		font-weight: bold;
+		color: $yellow;
+		margin: 20px auto 15px;
+		font-size: 16px;
+		@include smartphone{
+			font-size: 23px;
+		}
+	}
+	&__form-container{
+		width: auto;
+		margin: auto -15px -13px;
+		border: 3px $yellow solid;
+		border-radius: 10px;
+		padding: 15px;
+	}
+	&__title-fill{
+		color: #676767;
+		padding: 10px;
+		font-size: 16px;
+		@include smartphone{
+			font-size: 24px;
+		}
+	}
+	&__input-container{
+		margin-top: 5px;
+		@include smartphone{
+			margin-top: 20px;
+		}
+	}
+	&__input{
+		width: 100%;
+		color: #000;
+		background-color: #f2f2f2;
+		border: 0;
+		padding: 4px 12px 6px;
+		font-size: 18px;
+	}
+	&__privacy{
+		text-align: right;
+		color: $red;
+		font-size: 20px;
+		line-height: 1.5;
+		float: left;
+		width: 100%;
+		padding: 0 18px;
+	}
+	&__checkbox{
+		appearance: none;
+		background-color: #fafafa;
+		border: 1px solid #cacece;
+		box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+		padding: 9px;
+		border-radius: 3px;
+		display: inline-block;
+		position: relative;
+	}
+	&__btn-submit{
+		padding: 3px 23px;
+		margin: 20px auto 50px;
+		background-color: $red;
+		border-radius: 4px;
+		box-shadow: 0px 3px 5px -1px rgb(152, 152, 152);
+		border: 0px none;
+		font-size: 19px;
+		color: rgb(255, 255, 255);
+		cursor: pointer;
+		transition: all 200ms linear;
+		@include tablet{
+			margin: 20px auto 60px;
+		}
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
+	&__bottom{
+		width: 100%;
+		float: left;
+		text-align: left;
+		color: #595959;
+		@include smartphone{
+			width: 50%;
+		}
+	}
+	&__deco{
+		position: absolute;
+		width: 100%;
+		height: 80px;
+		top: 140px;
+		background: url('img/graffa-table.png') 7% 0px / 50px no-repeat, url('img/graffa-table.png') 93% 0px / 50px no-repeat;
+		@include smartphone{
+			top: 117px;
+		}
+		@include tablet{
+			top: 140px;
+		}
+		@include desktop{
+			top: 128px;
+			background: url('img/graffa-table.png') 7% 0px no-repeat, url('img/graffa-table.png') 93% 0px no-repeat;
+		}
+	}
+}
+
+.m1{
+	float: left;
+	margin: 0 0 10px 0px;
+	width: 100%;
+	@include tablet{
+		margin: 0 10px 18px 10px;
+		width: 47%;
+	}
+}
+.m2{
+	float: left;
+	margin: 0 0 10px 0;
+	width: 100%;
+	@include tablet{
+		margin: 0 10px 18px 10px;
+		width: 47%;
+	}
+}
+.b1{
+	font-size: 17px;
+	margin-bottom: 25px;
+	@include tablet{
+		font-size: 19px;
+		margin-bottom: 25px;
+		line-height: 1.7;
+		padding-left: 20px;	
+	}
+}
+.b2{
+	font-size: 10px;
+	line-height: 1.3;
+	@include tablet{
+		font-size: 15px;
+	}
+	img{
+		height: 30px;
+		margin:5px 15px 5px 0;
+		@include tablet{
+			height: 55px;
+			margin:0 10px 20px 30px;
+		}
+	}
+}
+
+input[type=checkbox] {
+	//display: none;
+	right: -99px;
+	position: relative;
+}
+
+.form__privacy label:after {
+	border: 2px solid $red;
+	background-color: #fff;
+	position: relative;
+	width: 15px;
+	height: 15px;
+	padding: 0px 11px;
+	margin-left: 8px;
+	content: "";
+	border-radius: 50%;
+}
+
+input[type=checkbox]:checked + label:after {
+	content: "\2713";
+	padding: 0 3px 0 4px;
+}
+
+
+
+
+/*
+Section eight
+*/
+.eight{
+	background-color: #4e4e4e;
+	height: 700px;
+}
+.contacts{
+	&__deco{
+		background: rgb(251, 198, 33) url('img/postit.png') no-repeat 0 120px / 640px;
+		height: 515px;
+		box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.23);
+		transition: all 0.4s ease-in;
+		@include smartphone{
+			background: rgb(251, 198, 33) url('img/postit.png') no-repeat 0 120px / 775px;
+		}
+		@include tablet{
+			background: rgb(251, 198, 33) url('img/postit.png') no-repeat 0 120px;
+		}
+	}
+	&__title{
+		padding: 25px;
+		background-color: rgb(255, 255, 255);
+		border-radius: 0 0 5px 5px;
+		box-shadow: 0px 2px 7px -2px #000;
+		color: #2e71af;
+		text-align: center;
+		width: auto;
+		margin: 0 3% 42px;
+		font-size: 16px;
+		@include smartphone{
+			margin-bottom: 46px;
+		}
+		@include tablet{
+			width: 700px;
+			margin: 0 auto 65px;
+			font-size: 20px;
+			br {
+				display: none;
+			}
+		}
+	}
+	&__sub-title{
+		color: #2e71af;
+		text-align: center;
+		font-weight: bold;
+		font-size: 14px;
+		@include tablet{
+			font-size: 23px;
+			margin-bottom: 17px;
+		}
+	}
+	&__social{
+		float: left;
+		margin-top: 36px;
+		@include tablet {
+			margin-top: 22px;
+		}
+		a {
+			display: block;
+		}
+		ul li{
+			float: left;
+			margin: 0 8px 0;
+			@include tablet{
+				margin: 15px 15px 0 14px;
+			}
+		}
+		&__btn{
+			height: 49px;
+			width: 37px;
+			@include smartphone{
+				width: 49px;
+			}
+			@include tablet{
+				width: 51px;
+			}
+		}
+	}
+	&__list{
+		float: right;
+		width: 100%;
+		margin-top: 70px;
+		@include smartphone{
+			margin-top: 90px;
+			//width: 64%;
+		}
+		@include tablet{
+			margin-top: 55px;
+			width: 58%;
+		}
+		@include desktop{
+			float: left;
+			margin-left: 3%;
+		}
+		> dl{
+			width: auto;
+			font-size: 13px;
+			@include smartphone{
+				font-size: 17px;
+			}
+			@include tablet{
+				width: 446px;
+				font-size: 19px;
+			}
+			> dt {
+				color: #fff;
+				font-weight: bold;
+				text-align: right;
+				float: left;
+				width: 35%;
+				margin-bottom: 5px;
+				@include smartphone {
+					width: 35%;
+				}
+				@include tablet {
+					width: 28%;
+				}
+			}
+			> dd {
+				color: #5c5c5c;
+				float: left;
+				width: 54%;
+				margin-left: 5%;
+				margin-bottom: 5px;
+				@include tablet{
+					width: 66%;
+				}
+			}
+		}
+	}
+}
+
+@mixin btn--icon($img1,$img2) {
+	background: transparent url($img1) no-repeat top left / 100%;
+	@include tablet{
+		background: transparent url($img1) no-repeat top left / auto;
+	}
+	&:hover {
+		background: transparent url($img2) no-repeat top left / 100%;
+		@include tablet{
+			background: transparent url($img2) no-repeat top left / auto;
+		}
+	}
+}
+
+.btn--mail {
+	@include btn--icon('img/i_mail1.png','img/i_mail2.png');
+}
+.btn--facebook {
+	@include btn--icon('img/i_fb1.png','img/i_fb2.png');
+}
+.btn--twitter {
+	@include btn--icon('img/i_tw1.png','img/i_tw2.png');
+}
+.btn--instagram {
+	@include btn--icon('img/i_in1.png','img/i_in2.png');
+}

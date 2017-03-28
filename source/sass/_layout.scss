@@ -1,0 +1,40 @@
+.l-header{
+	position: relative;
+	height: 75px;
+	max-width: 960px;
+	background-color: #fff;
+	box-shadow: $shadow-basic;
+	display: flex;
+	flex-wrap: wrap;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-between;
+	>div{
+		flex:1;
+	}
+	/*@include desktop {
+		height: 175px;
+	}*/
+}
+
+.l-wrapper{
+    max-width: 960px;
+    background-color: #fff;
+}
+
+.l-flex-container{
+	display: flex;
+	background: white;
+	flex-wrap: wrap;
+	flex-flow: column;
+}
+
+.l-box{
+	width: 100%;
+	flex:1;
+	@include desktop {
+		padding: 25px 20px;
+		min-height: 100vh;
+		box-shadow: $shadow-basic;
+	}
+}

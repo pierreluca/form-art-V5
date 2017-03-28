@@ -1,0 +1,46 @@
+/*
+Init
+
+
+section {
+    display: none;
+}
+
+section:nth-child(1) {
+    display: block;
+}
+*/
+.nav{
+	&--show {
+		margin-top: 0px;
+	}
+	&--hide {
+		margin-top: -40px;
+	}
+	&--deactive {
+		background-color: #f3f3f3;
+		border-color: #d2d2d2;
+		opacity: .7;
+		cursor: default;
+		&:hover{
+			transform: scale(1) !important;
+			background-color: #f3f3f3;
+		}
+	}
+	&main--minimize {
+		@include desktop {
+			height: 135px;
+		}
+	}
+}
+
+.state--scale-hide{ transform: scale(0); }
+.state--opacity-hide{ opacity: 0; }
+.state--color-transparent{ color: transparent; }
+.state--rotateY-hide{ transform: rotateY(90deg); }
+.state--rotateX-hide{ transform: rotateX(90deg); }
+.state--rotate360-hide{ transform: rotate(360deg) scale(0); }
+.state--become-background-hide{	background-position: -25% 70px, center 550px; }
+.state--left-hide{ left: -100%; }
+.state--right-hide{ right: -100%; }
+.state--top70-hide{ margin-top: -70px; }

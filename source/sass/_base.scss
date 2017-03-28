@@ -1,0 +1,27 @@
+*{
+	margin:0 auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+    //height: 100vh;
+    background: $bg-color url($bg-image);
+	font-family: $font;
+}
+
+ul {
+	list-style: none;
+}
+
+div {
+
+}
+
+header{
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: 999;
+}
